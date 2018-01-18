@@ -122,7 +122,8 @@ function moveDodger(e) {
    * And be sure to use the functions declared below!
    */
        if(e.which === LEFT_ARROW) {
-         console.log('left');
+         e.preventDefault();
+         e.stopPropagation();
          moveDodgerLeft();
        }
     /*   else {
