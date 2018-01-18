@@ -104,6 +104,9 @@ function createRock(x) {
  */
 function endGame() {
   clearInterval(gameInterval);
+  ROCKS.forEach(function(rock) {
+    rock.remove();
+  });
   var rocker = GAME.querySelectorAll('div.rock');
   for(let i = 0; i < rocker.length; i++){
     GAME.removeChild(rocker[i]);
