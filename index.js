@@ -136,8 +136,8 @@ function moveDodger(e) {
          moveDodgerRight();
        }
 
-         e.preventDefault();
-         e.stopPropagation();
+        // e.preventDefault();
+        // e.stopPropagation();
 
 }
 
