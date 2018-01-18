@@ -109,7 +109,8 @@ function endGame() {
     GAME.removeChild(rocker[i]);
   }
   window.removeEventListener('keydown', moveDodger);
-  return alert("YOU LOSE!");
+  alert("YOU LOSE!");
+  return;
 }
 
 function moveDodger(e) {
