@@ -74,7 +74,7 @@ function createRock(x) {
   }
 
   window.requestAnimationFrame(moveRock)
-}
+
     /**
      * If a rock collides with the DODGER,
      * we should call endGame()
