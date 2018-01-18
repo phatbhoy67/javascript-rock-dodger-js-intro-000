@@ -103,7 +103,6 @@ function createRock(x) {
  * Finally, alert "YOU LOSE!" to the player.
  */
 function endGame() {
-  console.log('end this hell!');
   clearInterval(gameInterval);
   var rocker = GAME.querySelectorAll('div.rock');
   for(let i = 0; i < rocker.length; i++){
