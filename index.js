@@ -16,7 +16,6 @@ var gameInterval = null
  * but all of your work should happen below.
  */
 function checkCollision(rock) {
-  console.log('checkCollision start')
   const top = positionToInteger(rock.style.top)
   // rocks are 20px high
   // DODGER is 20px high
