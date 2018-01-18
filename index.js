@@ -104,13 +104,11 @@ function createRock(x) {
  */
 function endGame() {
   clearInterval(gameInterval);
+
   ROCKS.forEach(function(rock) {
     rock.remove();
   });
-  var rocker = GAME.querySelectorAll('div.rock');
-  for(let i = 0; i < rocker.length; i++){
-    GAME.removeChild(rocker[i]);
-  }
+  
   window.removeEventListener('keydown', moveDodger);
   alert("YOU LOSE!");
 }
@@ -147,10 +145,10 @@ function moveDodgerLeft() {
 
    var left = positionToInteger(DODGER.style.left);
    function step() {
-    DODGER.style.left = `${left -= 4}px`
+    DODGER.style.left = `${left -= 4}px`;
    }
    if(left > 3) {
-  window.requestAnimationFrame(step)
+  window.requestAnimationFrame(step);
 }
 }
 
@@ -162,10 +160,10 @@ function moveDodgerRight() {
    */
    var left = positionToInteger(DODGER.style.left);
    function step() {
-     DODGER.style.left = `${left += 4}px`
+     DODGER.style.left = `${left += 4}px`;
    }
    if(left < 360) {
-  window.requestAnimationFrame(step)
+  window.requestAnimationFrame(step);
 }
 }
 
@@ -174,15 +172,15 @@ function moveDodgerRight() {
  * @returns {number} The position as an integer (without 'px')
  */
 function positionToInteger(p) {
-  return parseInt(p.split('px')[0]) || 0
+  return parseInt(p.split('px')[0]) || 0;
 }
 
 function start() {
-  window.addEventListener('keydown', moveDodger)
+  window.addEventListener('keydown', moveDodger);
 
-  START.style.display = 'none'
+  START.style.display = 'none';
 
   gameInterval = setInterval(function() {
     createRock(Math.floor(Math.random() *  (GAME_WIDTH - 20)))
-  }, 1000)
+  }, 1000);
 }
