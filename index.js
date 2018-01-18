@@ -109,7 +109,7 @@ function endGame() {
     GAME.removeChild(rocker[i]);
   }
   window.removeEventListener('keydown', moveDodger);
-  alert("YOU LOSE!");
+  return alert("YOU LOSE!");
 }
 
 function moveDodger(e) {
@@ -145,7 +145,6 @@ function moveDodgerLeft() {
    var left = positionToInteger(DODGER.style.left);
    function step() {
     DODGER.style.left = `${left -= 4}px`
-    console.log('dsl', DODGER.style.left);
    }
    if(left > 3) {
   window.requestAnimationFrame(step)
@@ -161,7 +160,6 @@ function moveDodgerRight() {
    var left = positionToInteger(DODGER.style.left);
    function step() {
      DODGER.style.left = `${left += 4}px`
-     console.log('dsl', DODGER.style.left);
    }
    if(left < 360) {
   window.requestAnimationFrame(step)
