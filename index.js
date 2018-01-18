@@ -132,7 +132,8 @@ function moveDodger(e) {
        } */
 
       else if(e.which === RIGHT_ARROW) {
-         console.log('right');
+        e.preventDefault();
+        e.stopPropagation();
          moveDodgerRight();
        }
 
